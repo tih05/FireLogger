@@ -1,0 +1,3 @@
+include ':fire_logger_no_op'
+include ':fire_logger'
+rootProject.name = "FireLogger"
