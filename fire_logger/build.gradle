@@ -12,7 +12,7 @@ android {
         minSdkVersion 21
         targetSdkVersion 30
         versionCode 1
-        versionName "0.1-beta"
+        versionName "0.2-beta"
     }
 
     compileOptions {
@@ -29,7 +29,7 @@ afterEvaluate {
             // Creates a Maven publication called "release".
             release(MavenPublication) {
                 groupId = 'com.tikhomirov.fire_logger'
-                version = "0.1-beta"
+                version = "0.2-beta"
                 from components.release
             }
         }
