@@ -83,6 +83,11 @@ class FireLogger() : Interceptor {
             .removePrefix(PREFIX_HTTP)
             .removePrefix(request.url().host())
             .replace('/', '\\')
+            .replace('.', ',')
+            .replace("#", "SHARP_SYMBOL")
+            .replace("$", "DOLLAR_SYMBOL")
+            .replace("[", "SQUARE_BRACKET_OPEN_SYMBOL")
+            .replace("]", "SQUARE_BRACKET_CLOSE_SYMBOL")
 
         val deviceRef =
             "$sessionStartTime - ${DeviceIdRepository.getSessionId()} ${DeviceIdRepository.getDeviceId()}"
